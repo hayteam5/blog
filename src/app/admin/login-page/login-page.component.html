@@ -1,1 +1,44 @@
-<p>login-page works!</p>
+<form class="card" [formGroup]="form" (ngSubmit)="submit()">
+  <h2>Entrer dans l'espace admin</h2>
+
+  <div class="form-control"
+       [ngClass]="{invalid: form.controls['email'].touched && form.controls['email'].invalid}">
+    <label for="email">Email:</label>
+    <input id="email" type="email" formControlName="email">
+    <div class="validation"
+         *ngIf="form.controls['email'].touched && form.controls['email'].invalid">
+      <small
+        *ngIf="form.controls['email'].errors?.['required']"
+      >Entrez l'adresse email</small>
+      <small
+        *ngIf="form.controls['email'].errors?.['email']"
+      >Email incorrecte</small>
+    </div>
+  </div>
+
+  <div class="form-control"
+       [ngClass]="{invalid: form.controls['password'].touched && form.controls['password'].invalid}">
+    <label for="password">Mot de passe:</label>
+    <input id="password" type="password" formControlName="password">
+    <div class="validation"
+         *ngIf="form.controls['password'].touched && form.controls['password'].invalid">
+      <small
+        *ngIf="form.controls['password'].errors?.['minlength']"
+      >Mot de passe doit avoir
+      {{form.controls['password'].errors?.['minlength'].requiredLength}}
+        caractères, vous avez rentré
+        {{form.controls['password'].errors?.['minlength'].actualLength}}.
+      </small>
+      <small
+        *ngIf="form.controls['password'].errors?.['required']"
+      >Entrez le mot de passe</small>
+    </div>
+  </div>
+
+  <button
+    class="btn btn-primary"
+    type="submit"
+    [disabled]="form.invalid"
+  >Entrer</button>
+
+</form>
