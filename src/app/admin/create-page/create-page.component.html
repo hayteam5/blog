@@ -1,1 +1,41 @@
-<p>create-page works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <h1>Creation de nouveau poste</h1>
+
+  <div class="form-control"
+       [ngClass]="{invalid: form.controls['title'].touched && form.controls['title'].invalid}">
+    <label for="title">Titre du poste:</label>
+    <input id="title" type="text" formControlName="title">
+    <div class="validation"
+         *ngIf="form.controls['title'].touched && form.controls['title'].invalid">
+      <small
+        *ngIf="form.controls['title'].errors?.['required']"
+      >Entrez le titre du poste</small>
+
+    </div>
+  </div>
+
+  <div class="form-control">
+    <label>Text du poste:</label>
+    <quill-editor formControlName="text"></quill-editor>
+  </div>
+
+  <div class="form-control"
+       [ngClass]="{invalid: form.controls['author'].touched && form.controls['author'].invalid}">
+    <label for="author">Auteur:</label>
+    <input id="author" type="text" formControlName="author">
+    <div class="validation"
+         *ngIf="form.controls['title'].touched && form.controls['title'].invalid">
+      <small
+        *ngIf="form.controls['author'].errors?.['required']"
+      >Entrez l'auteur du poste</small>
+
+    </div>
+  </div>
+
+  <button
+  type="submit"
+  class="btn-dark btn btn-block"
+  [disabled]="form.invalid"
+  >Créer un poste</button>
+
+</form>
