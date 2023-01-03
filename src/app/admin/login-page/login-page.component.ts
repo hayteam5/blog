@@ -25,6 +25,8 @@ export class LoginPageComponent implements OnInit {
     this.route.queryParams.subscribe((params: Params) => {
       if (params['loginAgain']){
         this.message = 'Veuillez remplir les données de connexion'
+      } else if (params['authFailed']) {
+        this.message = 'La cession est terminée, merci de vous connecter de nouveau'
       }
     })
 
