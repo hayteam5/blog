@@ -9,6 +9,9 @@ import { EditPageComponent } from './edit-page/edit-page.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {SharedModule} from "../shared/shared.module";
 import {AuthGuard} from "./shared/services/auth.guard";
+import {SearchPipe} from "./shared/search.pipe";
+import { AlertComponent } from './shared/components/alert/alert.component';
+import {AlertService} from "./shared/services/alert.service";
 
 @NgModule({
 
@@ -17,7 +20,9 @@ import {AuthGuard} from "./shared/services/auth.guard";
     LoginPageComponent,
     DashboardPageComponent,
     CreatePageComponent,
-    EditPageComponent
+    EditPageComponent,
+    SearchPipe,
+    AlertComponent
   ],
 
   imports: [
@@ -40,7 +45,7 @@ import {AuthGuard} from "./shared/services/auth.guard";
   ],
 
   exports: [RouterModule],
-  providers: [AuthGuard],
+  providers: [AuthGuard, AlertService],
 
 })
 
