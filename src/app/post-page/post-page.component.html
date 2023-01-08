@@ -3,11 +3,20 @@
   <div class="post">
     <div class="header">
       <h1>{{post.title}}</h1>
-      <button
-        class="btn btn-link"
-        routerLink="/"
-      >A l'accueil
-      </button>
+      <div class="btns">
+        <button
+          class="btn btn-link"
+          [routerLink]="['/admin', 'post', post.id, 'edit' ]"
+        >Modifier
+        </button>
+        <button
+          class="btn btn-link"
+          routerLink="/"
+        >A l'accueil
+        </button>
+      </div>
+
+
     </div>
 
     <div class="info">
