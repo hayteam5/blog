@@ -9,4 +9,5 @@ Angular CLI 14.1.0 (RxJS)
 ### Back: 
 Firebase (Realtime Database, Admin Auth API)
 ### Deployment:
-https://blog.miem.info (OVH Cloud)
+https://blog.miem.info (OVH Web Cloud)
+https://angular-blog-f1293.web.app (Firebase Hosting)
