@@ -5,8 +5,8 @@
 ## Stack utilisés
 
 ### Front: 
-Angular CLI 14.1.0
+Angular CLI 14.1.0 (RxJS)
 ### Back: 
-Firebase
+Firebase (Realtime Database, Admin Auth API)
 ### Deployment:
-https://blog.miem.info
+https://blog.miem.info (OVH Cloud)
