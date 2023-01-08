@@ -5,6 +5,7 @@
       <h1>{{post.title}}</h1>
       <div class="btns">
         <button
+          *ngIf="isAuth"
           class="btn btn-link"
           [routerLink]="['/admin', 'post', post.id, 'edit' ]"
         >Modifier
