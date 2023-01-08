@@ -1,5 +1,3 @@
-
-
 # Blog
 ## Mon deuxième projet personnel pour pratiquer et approfondir mes connaissances en Angular.
 ## Stack utilisés
