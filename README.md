@@ -9,3 +9,6 @@ Firebase (Realtime Database, Admin Auth API)
 ### Deployment:
 https://blog.miem.info (OVH Web Cloud)
 https://angular-blog-f1293.web.app (Firebase Hosting)
+
+### Other
+Le design, l'optimisation, et des nouveaux fonctionnalités en cours de developpement...
