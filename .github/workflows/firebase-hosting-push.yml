@@ -12,7 +12,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@master
       - name: Build
-        run: npm run build
+        run: firebase build
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
