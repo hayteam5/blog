@@ -10,7 +10,7 @@ import {SharedModule} from "./shared/shared.module";
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {AuthInterceptor} from "./shared/auth.interceptor";
 import {registerLocaleData} from "@angular/common";
-import frLocale from "@angular/common/locales/fr"
+import frLocale from "@angular/common/locales/fr";
 
 registerLocaleData(frLocale, 'fr')
 
@@ -31,7 +31,8 @@ const INTERCEPTOR_PROVIDER: Provider = {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+
   ],
   providers: [INTERCEPTOR_PROVIDER],
   bootstrap: [AppComponent]

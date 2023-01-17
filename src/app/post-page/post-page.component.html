@@ -25,8 +25,8 @@
       <small>{{post.date | date:'medium'}}</small>
     </div>
 
-    <div>
-      <quill-view-html [content]="post.text"></quill-view-html>
+    <div [ngxSummernoteView]="post.text">
+      <!--<quill-view-html [content]="post.text"></quill-view-html>-->
     </div>
 
   </div>

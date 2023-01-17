@@ -5,6 +5,7 @@ import {Subscription, switchMap} from "rxjs";
 import {Post} from "../../shared/interfaces";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {AlertService} from "../shared/services/alert.service";
+import {SummernoteOptions} from "ngx-summernote/lib/summernote-options";
 
 @Component({
   selector: 'app-edit-page',
@@ -17,6 +18,7 @@ export class EditPageComponent implements OnInit, OnDestroy {
   post!: Post
   submitted: boolean = false
   uSub?: Subscription
+  config!: SummernoteOptions
 
 
   constructor(

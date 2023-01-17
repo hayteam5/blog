@@ -1,15 +1,15 @@
 import {NgModule} from "@angular/core";
 import {HttpClientModule} from "@angular/common/http";
-import {QuillModule} from "ngx-quill";
+import {NgxSummernoteModule} from "ngx-summernote";
 
 @NgModule({
   imports: [
     HttpClientModule,
-    QuillModule.forRoot()
+    NgxSummernoteModule.forRoot()
   ],
   exports: [
     HttpClientModule,
-    QuillModule
+    NgxSummernoteModule
   ]
 })
 export class SharedModule {

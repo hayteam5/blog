@@ -16,7 +16,7 @@
 
   <div class="form-control">
     <label>Text du poste:</label>
-    <quill-editor formControlName="text"></quill-editor>
+      <div [ngxSummernote]="config" formControlName="text"></div>
   </div>
 
   <div class="form-control"
