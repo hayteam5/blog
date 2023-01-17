@@ -36,7 +36,7 @@ jobs:
           name: dist
           path: dist
       - name: Deploy to Firebase
-        uses: joinflux/firebase-tools@master
+        uses: joinflux/firebase-tools@v10.7.0
         with:
           args: deploy --only hosting
         env:
