@@ -39,5 +39,4 @@ jobs:
         uses: joinflux/firebase-tools@v10.7.0
         with:
           args: deploy --only hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANGULAR_BLOG_F1293 }}
+          FIREBASE_SERVICE: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANGULAR_BLOG_F1293 }}
