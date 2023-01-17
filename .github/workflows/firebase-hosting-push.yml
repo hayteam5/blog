@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 16
       - name: Build
-        run: npm run build -- --prod
+        run: npm run build
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
